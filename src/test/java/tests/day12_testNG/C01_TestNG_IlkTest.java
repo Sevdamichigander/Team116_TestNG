@@ -29,7 +29,21 @@ public class C01_TestNG_IlkTest {
          */
 
 
+    }
 
+    @Test
+    public void test02(){
+
+        // youtube anasayfaya gidin
+
+        Driver.getDriver().get("https://www.youtube.com");
+
+        //url i yazdirin
+        System.out.println(Driver.getDriver().getCurrentUrl());
+
+        //sayfayi kapatin
+
+        Driver.closeDriver();
 
     }
 }
