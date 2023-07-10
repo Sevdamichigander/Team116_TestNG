@@ -20,10 +20,12 @@ public class QdPage {
     @FindBy(xpath = "//*[@id='login-password']")
     public WebElement passwordKutusu;
 
-    @FindBy(xpath = "//*[@class='btn red radius-5 mt-4 w-100']")
+    @FindBy(xpath = "(//*[text() = 'Login'])[2]")
     public WebElement loginButonu;
 
     @FindBy(xpath = "(//a[text()='My courses'])[1]")
     public WebElement basariliGirisKontrolElementi;
+
+
 
 }

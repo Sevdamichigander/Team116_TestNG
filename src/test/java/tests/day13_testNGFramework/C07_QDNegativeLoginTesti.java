@@ -17,7 +17,7 @@ public class C07_QDNegativeLoginTesti {
     //4- Login butonuna basarak login olun
     //5- Basarili olarak giris yapilamadigini test edin
 
-    @Test
+    @Test(priority = 1)
     public void gecersizPasswordTesti(){
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
 
@@ -28,7 +28,43 @@ public class C07_QDNegativeLoginTesti {
         qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecerliUsername"));
         qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
 
-        qdPage.loginButonu.click();
+        qdPage.loginButonu.submit();
+
+        Assert.assertTrue(qdPage.emailKutusu.isDisplayed());
+
+        Driver.closeDriver();
+    }
+
+    @Test(priority = 3)
+    public void gecersizUsernameTesti() {
+
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+        QdPage qdPage = new QdPage();
+
+        qdPage.ilkLoginLinki.click();
+
+        qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+        qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecerliPassword"));
+
+        qdPage.loginButonu.submit();
+
+        Assert.assertTrue(qdPage.emailKutusu.isDisplayed());
+
+        Driver.closeDriver();
+    }
+
+    @Test(priority = 2)
+    public void gecersizUsernamePasswordTesti() {
+
+        Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
+        QdPage qdPage = new QdPage();
+
+        qdPage.ilkLoginLinki.click();
+
+        qdPage.emailKutusu.sendKeys(ConfigReader.getProperty("qdGecersizUsername"));
+        qdPage.passwordKutusu.sendKeys(ConfigReader.getProperty("qdGecersizPassword"));
+
+        qdPage.loginButonu.submit();
 
         Assert.assertTrue(qdPage.emailKutusu.isDisplayed());
 

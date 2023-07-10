@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 
 public class C03_ConfigReader {
+
     @Test
     public void test01(){
 
@@ -11,13 +12,11 @@ public class C03_ConfigReader {
 
         System.out.println(ConfigReader.getProperty("wiseurl"));// null
         /*
-        Key yanlis yaziliesa ConfigReader da ki properties objesi yanlis yazilan key i bulamaz ve null doner.
+        Key yanlis yazilirsa ConfigReader da ki properties objesi yanlis yazilan key i bulamaz
+         ve null doner.
          */
 
-        System.out.println(ConfigReader.getProperty("kullaniciAdi")); //ahmet
-
-
-
+        System.out.println(ConfigReader.getProperty("kullaniciAdiAhmet")); //rahmet
 
     }
 }
