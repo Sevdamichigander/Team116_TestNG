@@ -29,7 +29,8 @@ public class ConfigReader {
 
 
         /*
-        BU methoda biz istedigimiz key i gonderiyoruz? o da properties objesi kullanarak o key in karsisindaki value yu bize gonderiyor
+        BU methoda biz istedigimiz key i gonderiyoruz?
+        o da properties objesi kullanarak o key in karsisindaki value yu bize gonderiyor
 
          */
     }

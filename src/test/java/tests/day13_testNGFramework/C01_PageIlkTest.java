@@ -1,4 +1,4 @@
-package tests.day12_testNG.day13_testNGFramework;
+package tests.day13_testNGFramework;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -15,24 +15,33 @@ public class C01_PageIlkTest {
     @Test
     public void amazonTest(){
 
-
-
         // amazon anasayfaya gidin
         Driver.getDriver().get("https://www.amazon.com");
 
         // Nutella icin arama yapin
-        // Arama kutusunun locator'ina ihtiyacimiz var
-        // locator'larimiz artik pages class'larinda
-        // Locator'lar static olmadigi icin obje olusturarak kullanabiliriz
+
+        /*
+        Arama kutusunun locator'ina ihtiyacimiz var.
+        locator'larimiz artik pages class'larinda yer aliyor.
+        Locator'lar static olmadigi icin obje olusturarak kullanabiliriz.
+
+        Locator icin obje olusturmak lazim
+        obje icin de parametresiz bir constructor lazim
+        bunun icin de driver ayarlari yapmak lazim
+        */
+
 
         AmazonPage amazonPage = new AmazonPage();
 
         amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
 
+        ReusableMethods.bekle(3);
+
 
         // sonuclarin Nutella icerdigini test edin
 
         String expectedIcerik = "Nutella";
+
         String actualSonucYazisi = amazonPage.sonucYaziElementi.getText();
 
         Assert.assertTrue(actualSonucYazisi.contains(expectedIcerik));

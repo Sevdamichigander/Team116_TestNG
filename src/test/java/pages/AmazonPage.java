@@ -7,32 +7,31 @@ import utilities.Driver;
 
 public class AmazonPage {
 
-    public AmazonPage(){
-        // baska package'daki class'larin bu constructor'i kullanabilmeleri icin
-        // access mofifier'ini public yapalim
+    public AmazonPage() {
 
-        // bu page class'indan locate kullanacak tum class'lar
-        // AmazonPage class'indan obje olusturmali
-        // obje olusturmak icin de mutlaka bu Constructor calisacak
-        // o zaman bu class'da WebDriver'imizi tanimlama isini
-        // bu constructor icinde yapabiliriz
-
-        PageFactory.initElements(Driver.getDriver(),this);
+       PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    /*
+            baska package'daki class'larin bu constructor'i kullanabilmeleri icin
+        access modifier'ini public yapalim
 
+        bu page class'indan locate kullanacak tum class'lar
+        AmazonPage class'indan obje olusturmali==>
 
+        obje olusturmak icin de ==>mutlaka bu Constructor calismali
 
-    @FindBy(id ="twotabsearchtextbox")
+        ==> o zaman bu class'da WebDriver'imizi tanimlama isini
+        bu constructor icinde yapabiliriz
+
+        */
+
+    @FindBy(id = "twotabsearchtextbox")
     public WebElement aramaKutusu;
 
 
     @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
     public WebElement sonucYaziElementi;
-
-
-
-
 
 
 
