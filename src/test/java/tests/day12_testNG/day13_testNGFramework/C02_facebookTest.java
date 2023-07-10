@@ -1,6 +1,7 @@
 package tests.day12_testNG.day13_testNGFramework;
 
 import com.github.javafaker.Faker;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.FacebookPage;
 import utilities.Driver;
@@ -10,22 +11,31 @@ public class C02_facebookTest {
     @Test
     public void facebookTesti(){
 
-        //   1 - https://www.facebook.com/ adresine gidin
+        //1 - https://www.facebook.com/ adresine gidin
+        Driver.getDriver().get("https://www.facebook.com");
 
-        Driver.getDriver().get("https://www.facebook.com/");
 
-        //   2- POM’a uygun olarak email, sifre kutularini ve giris yap butonunu locate edin
-        //   3- Faker class’ini kullanarak email ve sifre degerlerini yazdirip, giris butonuna basin
+        //2- POM’a uygun olarak email, sifre kutularini ve giris yap butonunu locate edin
+        //3- Faker class’ini kullanarak email ve sifre degerlerini yazdirip, giris butonuna basin
 
         Faker faker = new Faker();
         FacebookPage facebookPage = new FacebookPage();
 
+        facebookPage.cookiesButton.click();
+
+        ReusableMethods.bekle(20);
+
         facebookPage.emailKutuElementi.sendKeys(faker.internet().emailAddress());
         facebookPage.passwordKutuElementi.sendKeys(faker.internet().password());
 
-        //   4- Basarili giris yapilamadigini test edin
+        facebookPage.girisYapButonu.click();
 
-        ReusableMethods.bekle(15);
+
+        //4- Basarili giris yapilamadigini test edin
+
+
+        Assert.assertTrue(facebookPage.basarisizGirisyaziElementi.isDisplayed());
+
         Driver.closeDriver();
 
     }

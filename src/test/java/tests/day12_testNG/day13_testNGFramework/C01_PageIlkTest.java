@@ -42,10 +42,5 @@ public class C01_PageIlkTest {
         ReusableMethods.bekle(5);
         Driver.closeDriver();
 
-
     }
-
-
-
-
 }
