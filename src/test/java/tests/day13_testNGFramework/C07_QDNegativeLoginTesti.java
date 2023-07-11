@@ -17,7 +17,7 @@ public class C07_QDNegativeLoginTesti {
     //4- Login butonuna basarak login olun
     //5- Basarili olarak giris yapilamadigini test edin
 
-    @Test(priority = 1)
+    @Test(groups = "smoke")
     public void gecersizPasswordTesti(){
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
 
@@ -35,7 +35,7 @@ public class C07_QDNegativeLoginTesti {
         Driver.closeDriver();
     }
 
-    @Test(priority = 3)
+    @Test(groups = "smoke")
     public void gecersizUsernameTesti() {
 
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
@@ -53,7 +53,7 @@ public class C07_QDNegativeLoginTesti {
         Driver.closeDriver();
     }
 
-    @Test(priority = 2)
+    @Test(groups = "smoke")
     public void gecersizUsernameGecersizPasswordTesti() {
 
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));

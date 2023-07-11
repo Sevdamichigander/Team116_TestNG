@@ -8,7 +8,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C03_SoftAssertion {
-    @Test
+    @Test(groups = "mini regression1")
     public void nutellaTesti(){
 
         // Butun hatalari ayni anda verir. Boylece hepsini tek seferde duzeltebiliriz.
