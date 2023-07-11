@@ -54,7 +54,7 @@ public class C07_QDNegativeLoginTesti {
     }
 
     @Test(priority = 2)
-    public void gecersizUsernamePasswordTesti() {
+    public void gecersizUsernameGecersizPasswordTesti() {
 
         Driver.getDriver().get(ConfigReader.getProperty("qdUrl"));
         QdPage qdPage = new QdPage();

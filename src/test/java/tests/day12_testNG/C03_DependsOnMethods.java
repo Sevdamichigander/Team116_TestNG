@@ -23,11 +23,11 @@ public class C03_DependsOnMethods {
 
         Driver.getDriver().get("https://www.amazon.com");
 
-        String expectedUrl = "samazon";
+        String expectedUrl = "amazon";
 
-        String actualUrl = Driver.driver.getCurrentUrl();
+        String actualUrl = Driver.getDriver().getCurrentUrl();
 
-        Assert.assertTrue(actualUrl.contains(expectedUrl));
+       Assert.assertTrue(actualUrl.contains(expectedUrl));
 
     }
 
@@ -49,7 +49,7 @@ public class C03_DependsOnMethods {
     @Test(dependsOnMethods = "nutellaAramaTesti")
     public void isimIcerikTest(){
         //3- ilk urune click yapip acilan sayfadaki urun isminin Nutella icerdigini test edin
-        Driver.getDriver().findElement(By.xpath("//div[@class='a-section a-spacing-base'])[1]")).click();
+        Driver.getDriver().findElement(By.xpath("(//div[@class='a-section a-spacing-base'])[1]")).click();
 
         WebElement urunIsimElementi = Driver.getDriver().findElement(By.xpath("//span[@id='productTitle']"));
 
