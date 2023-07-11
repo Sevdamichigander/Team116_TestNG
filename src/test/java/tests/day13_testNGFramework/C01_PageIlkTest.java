@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.AmazonPage;
+import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
@@ -16,6 +17,7 @@ public class C01_PageIlkTest {
     public void amazonTest(){
 
         // amazon anasayfaya gidin
+
         Driver.getDriver().get("https://www.amazon.com");
 
         // Nutella icin arama yapin
@@ -33,7 +35,10 @@ public class C01_PageIlkTest {
 
         AmazonPage amazonPage = new AmazonPage();
 
+
         amazonPage.aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
+
+        //amazonPage.aramaKutusu.sendKeys(ConfigReader.getProperty("amazonArananKelime")+Keys.ENTER);
 
         ReusableMethods.bekle(3);
 

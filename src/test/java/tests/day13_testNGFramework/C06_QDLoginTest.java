@@ -30,6 +30,7 @@ public class C06_QDLoginTest {
 
         // 5- Login butonuna basarak login olun
         qdPage.loginButonu.submit();
+
         // 6- Basarili olarak giris yapilabildigini test edin
 
         Assert.assertTrue(qdPage.basariliGirisKontrolElementi.isDisplayed());

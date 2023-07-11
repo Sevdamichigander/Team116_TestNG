@@ -1,4 +1,4 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
 <suite name="Istenen test methodlarini calistirma">
 
     <!-- Eger birden fazla hiyerarsiye ihtiyaciniz varsa
@@ -24,3 +24,5 @@
         </packages>
     </test>
 </suite>
+
+

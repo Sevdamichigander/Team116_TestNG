@@ -2,8 +2,11 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+
+import java.util.List;
 
 public class AmazonPage {
 
@@ -32,5 +35,8 @@ public class AmazonPage {
 
     @FindBy(xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
     public WebElement sonucYaziElementi;
+
+    @FindBy(xpath = "//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-3']")
+    public List<WebElement> urunlerListesi;
 
 }

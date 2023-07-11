@@ -13,7 +13,7 @@ public class C03_SoftAssertion {
 
         // Butun hatalari ayni anda verir. Boylece hepsini tek seferde duzeltebiliriz.
         //(Biz isteyinceye kadar)Testlerimiz failed olsa bile hatalari not alir ve calismaya devam eder. (JUnit ten farki)
-        // Raporla dedigimizde failed olanlai bize soyluyor.
+        // Raporla dedigimizde failed olanlari bize soyluyor.
 
 
         //amazona gidin
@@ -28,7 +28,6 @@ public class C03_SoftAssertion {
 
         SoftAssert softAssert = new SoftAssert();
 
-
         //title in  best icermedigini test edin
 
         String unexpectedIcerik = "best";
@@ -36,13 +35,13 @@ public class C03_SoftAssertion {
 
         softAssert.assertFalse(actualTitle.contains(unexpectedIcerik));
 
-
         //url in "https://www.amazon.com/" oldugunu test edin
 
         String expectedUrl = "https://www.amazon.com/";
         String actualUrl = Driver.getDriver().getCurrentUrl();
 
         softAssert.assertEquals(actualUrl,expectedUrl);
+
 
         //Nutella aratin
 
@@ -57,6 +56,8 @@ public class C03_SoftAssertion {
         softAssert.assertTrue(actualSonucYazisi.contains(expectedIcerik));
 
         softAssert.assertAll();
+
+        Driver.closeDriver();
 
 
     }
