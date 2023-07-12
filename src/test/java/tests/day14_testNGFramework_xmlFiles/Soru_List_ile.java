@@ -7,9 +7,10 @@ import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class Deneme {
+public class Soru_List_ile {
     @Test
     public void test01(){
+
         // amazona gidin
 
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
@@ -23,7 +24,9 @@ public class Deneme {
         // 12. urunun yazisini gosterin
 
         String actualUrunIsmi = amazonPage.urunlerListesi.get(11).getText();
+
         System.out.println(actualUrunIsmi);
+
         String expectedIcerik = "12x";
 
         Assert.assertTrue(actualUrunIsmi.contains(expectedIcerik));

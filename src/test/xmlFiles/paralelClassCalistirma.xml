@@ -1,6 +1,34 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Istenen Classlari paralel Calistirma" parallel="classes" thread-count="2">
+<suite name="Istenen Classlari paralel Calistirma" parallel="classes" thread-count="2" verbose="3">
+
+    <!-- Paralel calistirmak icin xml dosyamizda
+    cok kucuk iki ekleme yapmamiz yeterlidir.
+
+    1- parallel = "classes", / test ya da methods olabilir
+        bolusumun hangi seviyede yapialcagini belirler.
+
+        Testler calisirken cakismalar olmamasi,
+        gorev bolusumunun mumkun oldugunca esit olmasi,
+        bagimli testlerin ayni browser tarafindan calistirilabilmesi icin
+        tum classlari/packagelari manuel olarak testlere ayirip
+         test bazinda bolusum yapmak en uygunu olacaktir.
+
+         2- thread-count = ayni anda calisacak browser sayisini belirler.
+         Yaptigimiz bu configuration da browser in ne oldugu configuration.properties dosyasindan geldigi icin
+         paralel calisan tum browserlar aynidir.
+
+         Farkli browserlarla paralel calistirma icin (cross browser test)
+         ozel bir configuration yapmak gereklidir.
+
+         3- verbose = tum xml dosyalarinda kullanilabilir.
+                    calistirma sonrasinda konsolda yazdirilan detay seviyesini belirler.
+                    1: minimum
+                    10: maximum olmak uzere istediginiz degeri secebilirsiniz.
+
+
+        -->
+
 
     <test name="class calistirma">
         <classes>
@@ -8,5 +36,8 @@
             <class name="tests.day13_testNGFramework.C02_facebookTest"></class>
         </classes>
     </test>
-
 </suite>
+
+<!-- Amac ayni anda birden fazla browser in calismasidir.
+Cok ihtiyac kalmadi. Cunku testlerimizi uzak masaustunde Jenkins te calisiyoruz.
+ -->
