@@ -9,16 +9,17 @@
     <test name="Chrome ile calisacak testler">
 
         <parameter name="browser" value="chrome"></parameter>
-
-
+        <packages>
+            <package name="tests.day15_crossBrowserTestler"></package>
+        </packages>
     </test>
+
+
     <test name="Firefox ile calisacak testler">
-        <parameter name="browser" value="firefox"></parameter>
-
-
+        <parameter name="browser" value="edge"></parameter>
+        <packages>
+            <package name="tests.day15_crossBrowserTestler"></package>
+        </packages>
     </test>
-
-
-
 
 </suite>

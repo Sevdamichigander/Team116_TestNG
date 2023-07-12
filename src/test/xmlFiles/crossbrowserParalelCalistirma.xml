@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Cross Browser Calistirma" parallel="tests" thread-count="2">
+    <!--Kac farkli browser ile calisacaksaniz herbiri icin
+    Test tagindan itibaren calisacak testleri yazmaliyiz.
+
+     Her testin altinda parameter kullanarak istenen browser i yazin
+
+
+     hocam bunun kullaniminda obje ile locator alma bir kenara ayrildigi icin
+      bu gibi kararlarin basta verilmis olmasi gerekli sanirim.
+      Obje kisminda da bir degisiklik olmasa crossdriver baya kolay dahil edilecekti. ancak su an boyle bi durum yok.-->
+
+    <test name="Chrome ile calisacak testler">
+
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.day15_crossBrowserTestler.C01_AmazonSearch"></class>
+            <class name="tests.day15_crossBrowserTestler.C02_AlertsTesti"></class>
+        </classes>
+
+    </test>
+
+
+    <test name="Edge ile calisacak testler">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="tests.day15_crossBrowserTestler.C03_BasicAuthentication"></class>
+        </classes>
+       
+    </test>
+
+</suite>
