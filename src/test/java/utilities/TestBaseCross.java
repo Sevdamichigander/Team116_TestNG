@@ -9,6 +9,7 @@ import java.time.Duration;
 public class TestBaseCross {
 
     protected WebDriver driver;
+
     @Parameters("browser")
 
     @BeforeMethod
@@ -22,3 +23,15 @@ public class TestBaseCross {
         DriverCross.closeDriver();
     }
 }
+/*
+TestBaseCross sınıfından türetilen bir alt classta
+farklı test senaryoları yazmak istediğinizde,
+driver değişkenine alt class ta erişerek onu kullanabilirsiniz.
+Bu şekilde, driver nesnesine erişim sağlayarak alt classlarda ortak bir WebDriver oturumu kullanabilir
+ ve tekrar tekrar oluşturmak zorunda kalmazsınız.
+
+Ancak, access modifier in protected olmasi nedeni ile
+diğer packagelardan veya TestBaseCross classinin dışında bulunan classlardan doğrudan erişim engellenir.
+ Bu, driver değişkenini sınıf hiyerarşisinde sınırlı bir erişime sahip olmasını sağlar
+  ve tasarımınızı daha modüler hale getirebilir.
+ */

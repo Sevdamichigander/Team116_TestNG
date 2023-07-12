@@ -7,12 +7,12 @@
      Her testin altinda parameter kullanarak istenen browser i yazin
 
 
-     hocam bunun kullaniminda obje ile locator alma bir kenara ayrildigi icin
-      bu gibi kararlarin basta verilmis olmasi gerekli sanirim.
-      Obje kisminda da bir degisiklik olmasa crossdriver baya kolay dahil edilecekti. ancak su an boyle bi durum yok.-->
+      Obje ile locator alma bir kenara ayrildigi icin
+      bu gibi kararlarin basta verilmis olmasi gerekli.
+      Obje kisminda da bir degisiklik olmasa
+      crossdriver baya kolay dahil edilecekti. ancak su an boyle bi durum yok.(Selgun bey)-->
 
     <test name="Chrome ile calisacak testler">
-
         <parameter name="browser" value="chrome"></parameter>
         <classes>
             <class name="tests.day15_crossBrowserTestler.C01_AmazonSearch"></class>
@@ -21,13 +21,13 @@
 
     </test>
 
-
     <test name="Edge ile calisacak testler">
         <parameter name="browser" value="edge"></parameter>
         <classes>
             <class name="tests.day15_crossBrowserTestler.C03_BasicAuthentication"></class>
         </classes>
-       
+
     </test>
+
 
 </suite>

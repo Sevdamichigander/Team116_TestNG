@@ -2,7 +2,7 @@ package tests.day15_TestNGReports_DataProvider;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.HerOkuApp;
+import pages.HerOkuAppPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
@@ -17,7 +17,7 @@ public class C01_ReusableClassSwitchWindows {
 
         //Click Here butonuna basın.
 
-        HerOkuApp herOkuApp = new HerOkuApp();
+        HerOkuAppPage herOkuApp = new HerOkuAppPage();
         herOkuApp.clickHereButonu.click();
 
 

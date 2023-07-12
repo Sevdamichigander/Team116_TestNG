@@ -1,6 +1,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Cross Browser Calistirma">
+
     <!--Kac farkli browser ile calisacaksaniz herbiri icin
     Test tagindan itibaren calisacak testleri yazmaliyiz.
 
@@ -15,7 +16,7 @@
     </test>
 
 
-    <test name="Firefox ile calisacak testler">
+    <test name="Edge ile calisacak testler">
         <parameter name="browser" value="edge"></parameter>
         <packages>
             <package name="tests.day15_crossBrowserTestler"></package>

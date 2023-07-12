@@ -25,4 +25,20 @@ public class FacebookPage {
 
     @FindBy(xpath = "//*[@class='_9ay7']")
     public WebElement basarisizGirisyaziElementi;
+
+    @FindBy(xpath = "//*[text()='Créer nouveau compte']")
+    public WebElement creerNouveauCompte;
+
+    @FindBy(xpath = "//input[@value='1']")
+    public WebElement buttonFemme;
+
+    @FindBy(xpath = "//input[@value='2']")
+    public WebElement buttonHomme;
+
+    @FindBy(xpath = "//input[@value='-1']")
+    public WebElement buttonPersonnalise;
+
+
+
+
 }

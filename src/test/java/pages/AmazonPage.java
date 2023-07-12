@@ -39,4 +39,9 @@ public class AmazonPage {
     @FindBy(xpath = "//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-3']")
     public List<WebElement> urunlerListesi;
 
+    @FindBy(id = "searchDropdownBox")
+    public WebElement dropdown;
+
+
+
 }

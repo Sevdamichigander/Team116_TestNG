@@ -21,7 +21,9 @@ public class C04_DataProviderNegatifLoginTesti extends TestBaseRapor {
     }
 
     @Test(dataProvider = "kullaniciListesi")
+
     public void cokluNegatifLoginTesti(String kullaniciAdi, String password){
+
         extentTest=extentReports.createTest("Data Provider", "Coklu negatif login testi");
 
         // Qualitydemy anasayfaya gidin

@@ -36,11 +36,19 @@ public class C03_DataProvider_AmazonAramaTesti {
 
         AmazonPage amazonPage = new AmazonPage();
 
-        // Eger ayni test methodunun icinde liste ile yaparsak ilk hata mesajinda test durur. AMA
-        // Data Provider bu testi her seferinde yeniden calistiriyo gibi yapar. Disardan bir yerden gelecek/ ANCAK parametre olursa bu bilgi gelebilir.
+        // Eger ayni test methodunun icinde /
+        // liste ile yaparsak
+        // ilk hata mesajinda test durur. AMA
+        // Data Provider bu testi her seferinde yeniden calistiriyo gibi yapar.
+        // Disardan bir yerden gelecek/ ANCAK parametre olursa bu bilgi disardan gelebilir.
+        //Dolayisiyla 26. satira gidip (String aranacakUrun) gibi bir parametre ekliyoruz.
 
         amazonPage.aramaKutusu.sendKeys(aranacakUrun + Keys.ENTER);
         Assert.assertTrue(amazonPage.sonucYaziElementi.getText().contains(aranacakUrun));
+
+        // Bu asamada data olmadigi/parametre bos oldugu icin hata verir.
+        //24. satirda @Test in yanina gidip parantez aciyoruz.
+        //dataProvider = "" a atama yapiyoruz.
 
         Driver.closeDriver();
 
