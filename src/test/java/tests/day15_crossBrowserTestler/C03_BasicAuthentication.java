@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.DriverCross;
 import utilities.TestBaseCross;
 
 public class C03_BasicAuthentication extends TestBaseCross {
@@ -18,6 +19,7 @@ public class C03_BasicAuthentication extends TestBaseCross {
         //  password      : admin
         //
         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
+
         //4- Basarili sekilde sayfaya girildigini dogrulayin
         WebElement congratyaziElementi = driver.findElement(By.tagName("p"));
         Assert.assertTrue(congratyaziElementi.isDisplayed());

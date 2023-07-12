@@ -5,7 +5,7 @@
     <!-- Paralel calistirmak icin xml dosyamizda
     cok kucuk iki ekleme yapmamiz yeterlidir.
 
-    1- parallel = "classes", / test ya da methods olabilir
+         1- parallel = "classes", / test ya da methods olabilir
         bolusumun hangi seviyede yapialcagini belirler.
 
         Testler calisirken cakismalar olmamasi,
@@ -22,9 +22,9 @@
          ozel bir configuration yapmak gereklidir.
 
          3- verbose = tum xml dosyalarinda kullanilabilir.
-                    calistirma sonrasinda konsolda yazdirilan detay seviyesini belirler.
-                    1: minimum
-                    10: maximum olmak uzere istediginiz degeri secebilirsiniz.
+                        calistirma sonrasinda konsolda yazdirilan detay seviyesini belirler.
+                        1: minimum
+                        10: maximum olmak uzere istediginiz degeri secebilirsiniz.
 
 
         -->

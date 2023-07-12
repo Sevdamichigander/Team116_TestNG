@@ -25,7 +25,7 @@ public class C02_facebookTest {
 
         FacebookPage facebookPage = new FacebookPage();
 
-        facebookPage.cookiesButton.click();
+        facebookPage.cookiesButton.submit();
 
         facebookPage.emailKutuElementi.sendKeys(faker.internet().emailAddress());
         facebookPage.passwordKutuElementi.sendKeys(faker.internet().password());

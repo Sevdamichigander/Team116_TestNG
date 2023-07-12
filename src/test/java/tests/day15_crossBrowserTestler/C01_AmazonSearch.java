@@ -13,7 +13,7 @@ public class C01_AmazonSearch extends TestBaseCross {
     @Test
     public void amazonTest() {
 
-        //driver icin page sayflarini kullanamayiz. TestBaseCross tan gelen driver i kullanacagiz.
+        //driver icin page sayfalarini kullanamayiz. TestBaseCross tan gelen driver i kullanacagiz.
 
         // amazon anasayfaya gidelim
         driver.get("https://www.amazon.com");
@@ -26,6 +26,7 @@ public class C01_AmazonSearch extends TestBaseCross {
         String expectedicerik = "Nutella";
         WebElement aramaSonucuElementi= driver.findElement(By.xpath("(//div[@class='sg-col-inner'])[1]"));
         String actualAramaSonucyazisi= aramaSonucuElementi.getText();
+
         Assert.assertTrue(actualAramaSonucyazisi.contains(expectedicerik));
     }
 }
