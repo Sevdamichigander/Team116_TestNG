@@ -11,48 +11,15 @@ import java.time.Duration;
 
 public class Driver {
 
-    private static WebDriver driver;
+    private static WebDriver driver; // driver i class duzeyinde olusturduk.
+                                    // Boylece hem getDriver() methodunda
+                                    //hem de diger methodlarda rahatlikla kullanabilecegiz.
 
     private Driver(){
 
     }
 
     public static WebDriver getDriver(){
-        /*
-            Bundan sonra daha once driver olarak TestBase'den alip kullandigimiz
-            WEbDriver'in yerine
-
-            Driver class'indan getDriver()'unu kullanacagiz
-            ancak mahserin dort atlisinda kullandigimiz
-
-            driver= new ChromeDriver();
-
-            problem olusturuyor, cunku her calistiginda yeniden bir ChromeDriver olusturuyor
-
-            Bizim istedigimiz sey su :
-
-            ben testimiz calistirmaya basladigimda
-            ilk kez bu method'u kullaninca ChromeDriver olustursun
-            sonraki kullanimlarda olusturmasin
-
-            bunun icin driver == null kontrol edip
-            ona gore yeni ChromeDriver atamasi yapiyoruz
-
-         */
-
-        /*
-            isyerimizde calisirken
-            testlerimizi farkli browser'lar ile calistirmamiz istenebilir.
-            Dinamik olarak browser kullanabilmek icin
-            configuration.properties dosyamizda browser = istenenBrowser
-            seklinde browser'i tanimladik
-
-            Driver class'inda da configuration.properties dosyasindaki
-            bilgiyi okuyup, o bilgiye gore istenen browser'i olusturacak
-            bir yapi hazirlayalim
-         */
-
-
 
         if(driver == null) {
 
@@ -81,8 +48,6 @@ public class Driver {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
 
-
-
         return driver;
     }
 
@@ -94,6 +59,10 @@ public class Driver {
         }
     }
 
+    /*
+    Drive ri kapattiktan sonra onu baslangic noktasina dondurmek icin closeDriver() methodunu yaptik.
+     */
+
     public static void quitDriver(){
         if (driver != null) {
             driver.quit();
@@ -101,3 +70,38 @@ public class Driver {
         }
     }
 }
+
+  /*
+            Bundan sonra daha once driver olarak TestBase'den alip kullandigimiz
+            WebDriver'in yerine
+
+            Driver class'indan getDriver() methodunu kullanacagiz
+            ancak mahserin dort atlisinda kullandigimiz
+
+            driver= new ChromeDriver();
+
+            problem olusturuyor, cunku her calistiginda yeniden bir chromeDriver olusturuyor.
+
+            Bizim istedigimiz sey su :
+
+            ben testimi calistirmaya basladigimda
+            ilk kez bu method'u kullaninca ChromeDriver olustursun
+            sonraki kullanimlarda olusturmasin
+
+            bunun icin driver == null kontrol edip
+            ona gore yeni ChromeDriver atamasi yapiyoruz
+
+         */
+
+
+        /*
+            isyerimizde calisirken
+            testlerimizi farkli browser'lar ile calistirmamiz istenebilir.
+            Dinamik olarak browser kullanabilmek icin
+            configuration.properties dosyamizda browser = istenenBrowser
+            seklinde browser'i tanimladik
+
+            Driver class'inda da configuration.properties dosyasindaki
+            bilgiyi okuyup, o bilgiye gore istenen browser'i olusturacak
+            bir yapi hazirlayalim
+         */

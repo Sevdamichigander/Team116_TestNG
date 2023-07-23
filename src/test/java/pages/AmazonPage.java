@@ -10,9 +10,14 @@ import java.util.List;
 
 public class AmazonPage {
 
+    /*
+    Locater almak icin bu class ta da mutlaka driver i tanimlamamiz lazim.
+     */
+
     public AmazonPage() {
 
        PageFactory.initElements(Driver.getDriver(), this);
+       // Bu class ta driver olarak bunu tanimla dedik.
     }
 
     /*
@@ -28,6 +33,10 @@ public class AmazonPage {
         bu constructor icinde yapabiliriz
 
         */
+
+    /*
+    Locater almak icin bu class ta da mutlaka driver i tanimlamamiz lazim.
+     */
 
     @FindBy(id = "twotabsearchtextbox")
     public WebElement aramaKutusu;

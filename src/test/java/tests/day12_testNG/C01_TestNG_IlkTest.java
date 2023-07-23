@@ -11,11 +11,11 @@ public class C01_TestNG_IlkTest {
         /*
         Page Object Model(POM) de driver olusturmak ve gerekli ayarlari yapmak icin
          @Testbase kullanmak yerine,
-        ayri bir driver class i icerisinde
+        (utilities in altinda) ayri bir driver class i icerisinde
         bize driver dondurecek bir method olusturulmasi tercih edilmistir.
          */
 
-        Driver.getDriver().get("https://www.amazon.com");
+        Driver.getDriver().get("https://www.amazon.com"); // Driver class inda ki driver i getiriyor.
 
         ReusableMethods.bekle(5);
 

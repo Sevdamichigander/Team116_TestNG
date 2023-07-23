@@ -28,7 +28,7 @@ public class C01_PageIlkTest {
         Locator'lar static olmadigi icin obje olusturarak kullanabiliriz.
 
         Locator icin obje olusturmak lazim
-        obje icin de parametresiz bir constructor lazim
+        obje icin de parametresiz bir constructor lazim(page sayfasinda once bu constructor calisir)
         bunun icin de driver ayarlari yapmak lazim
         */
 

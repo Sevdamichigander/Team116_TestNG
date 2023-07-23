@@ -6,7 +6,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import java.time.Duration;
 
-public class TestBaseCross {
+public class  TestBaseCross {
 
     protected WebDriver driver;
 
